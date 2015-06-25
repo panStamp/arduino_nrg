@@ -111,7 +111,9 @@ void PANSTAMP::init(uint8_t freq, uint8_t mode)
   INIT_ONBOARD_LED();
 
   // Initialize internal ACC power pin
+  #if defined(__NRG_VERSION_1_0__) || defined(__NRG_VERSION_1_1__)
   INIT_ACC_POWER();
+  #endif
 
   // Setup radio interface
   radio.init(freq, mode);
