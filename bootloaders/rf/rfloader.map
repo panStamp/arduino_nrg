@@ -1,33 +1,33 @@
 Archive member included because of file (symbol)
 
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
                               swap.o (memcpy)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
-                              /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o (_reset_vector__)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
-                              /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__watchdog_support)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
-                              /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__init_stack)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
-                              /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__low_level_init)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
-                              /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__do_copy_data)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
-                              /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__do_clear_bss)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
-                              /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__stop_progExec__)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
-                              /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (_endless_loop__)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
-                              /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o (_unexpected_)
-/home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
+                              /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o (_reset_vector__)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+                              /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__watchdog_support)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+                              /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__init_stack)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
+                              /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__low_level_init)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+                              /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__do_copy_data)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+                              /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__do_clear_bss)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
+                              /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (__stop_progExec__)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+                              /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o) (_endless_loop__)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+                              /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o (_unexpected_)
+/home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
                               rfloader.o (__do_global_ctors)
 
 Discarded input sections
 
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
- .text.crt0     0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
+ .text.crt0     0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
  .text          0x0000000000000000        0x0 rfloader.o
  .data          0x0000000000000000        0x0 rfloader.o
  .bss           0x0000000000000000        0x0 rfloader.o
@@ -45,38 +45,38 @@ Discarded input sections
  .text          0x0000000000000000        0x0 swap.o
  .data          0x0000000000000000        0x0 swap.o
  .bss           0x0000000000000000        0x0 swap.o
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
- .text          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
- .data          0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
- .bss           0x0000000000000000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+ .text          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+ .data          0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+ .bss           0x0000000000000000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
 
 Memory Configuration
 
@@ -102,16 +102,16 @@ far_rom          0x0000000000000000 0x0000000000000000
 
 Linker script and memory map
 
-LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
+LOAD /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
 LOAD rfloader.o
 LOAD cc430radio.o
 LOAD rf1a.o
 LOAD pmm.o
 LOAD swap.o
-LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a
-LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a
-LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a
-LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a
+LOAD /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a
+LOAD /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a
+LOAD /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a
+LOAD /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a
                 0x0000000000000080                PROVIDE (__info_segment_size, 0x80)
                 0x0000000000001800                PROVIDE (__infod, 0x1800)
                 0x0000000000001880                PROVIDE (__infoc, 0x1880)
@@ -825,25 +825,25 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
                 0x0000000000008000                . = ALIGN (0x2)
  *(.init .init.*)
  *(.init0)
- .init0         0x0000000000008000        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
+ .init0         0x0000000000008000        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_reset_vector__-dwdt.o)
                 0x0000000000008000                _reset_vector__
  *(.init1)
- .init1         0x0000000000008000        0x6 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+ .init1         0x0000000000008000        0x6 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
                 0x0000000000008000                __watchdog_support
  *(.init2)
- .init2         0x0000000000008006        0x4 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+ .init2         0x0000000000008006        0x4 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
                 0x0000000000008006                __init_stack
  *(.init3)
- .init3         0x000000000000800a        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
+ .init3         0x000000000000800a        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__low_level_init-dwdt.o)
                 0x000000000000800a                __low_level_init
  *(.init4)
- .init4         0x000000000000800a       0x12 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+ .init4         0x000000000000800a       0x12 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
                 0x000000000000800a                __do_copy_data
- .init4         0x000000000000801c       0x10 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+ .init4         0x000000000000801c       0x10 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
                 0x000000000000801c                __do_clear_bss
  *(.init5)
  *(.init6)
- .init6         0x000000000000802c        0xe /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+ .init6         0x000000000000802c        0xe /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
                 0x000000000000802c                __do_global_ctors
  *(.init7)
  *(.init8)
@@ -851,7 +851,7 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
  .init9         0x000000000000803a      0x334 rfloader.o
                 0x000000000000803a                main
  *(.fini9)
- .fini9         0x000000000000836e        0x0 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
+ .fini9         0x000000000000836e        0x0 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__stop_progExec__-dwdt.o)
                 0x000000000000836e                __stop_progExec__
  *(.fini8)
  *(.fini7)
@@ -862,7 +862,7 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
  *(.fini2)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000000000836e        0x6 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+ .fini0         0x000000000000836e        0x6 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
                 0x000000000000836e                _endless_loop__
  *(.fini .fini.*)
                 0x0000000000008374                . = ALIGN (0x2)
@@ -875,7 +875,7 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
                 0x0000000000008376                __dtors_end = .
                 0x0000000000008376                . = ALIGN (0x2)
  *(.text .text.* .gnu.linkonce.t.*)
- .text          0x0000000000008376        0x4 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
+ .text          0x0000000000008376        0x4 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
                 0x0000000000008376                __isr_37
                 0x0000000000008376                __isr_47
                 0x0000000000008376                __isr_51
@@ -964,9 +964,9 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
  .text._ZN4SWAP10sendPacketEhhPhh
                 0x0000000000008a74       0x8a swap.o
                 0x0000000000008a74                _ZN4SWAP10sendPacketEhhPhh
- .text          0x0000000000008afe       0xe4 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .text          0x0000000000008afe       0xe4 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
                 0x0000000000008afe                memcpy
- .text.crt0     0x0000000000008be2        0x2 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+ .text.crt0     0x0000000000008be2        0x2 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
                 0x0000000000008be2                _unexpected_
                 0x0000000000008be4                . = ALIGN (0x2)
 
@@ -1053,7 +1053,7 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
 .vectors        0x000000000000ff80       0x80
                 0x000000000000ff80                PROVIDE (__vectors_start, .)
  *(.vectors*)
- .vectors       0x000000000000ff80       0x80 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
+ .vectors       0x000000000000ff80       0x80 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl64.o
                 0x000000000000ff80                __ivtbl_64
                 0x0000000000010000                _vectors_end = .
 
@@ -1113,21 +1113,21 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
  .debug_aranges
                 0x0000000000000094       0x14 swap.o
  .debug_aranges
-                0x00000000000000a8       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+                0x00000000000000a8       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
  .debug_aranges
-                0x00000000000000bc       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+                0x00000000000000bc       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
  .debug_aranges
-                0x00000000000000d0       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+                0x00000000000000d0       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
  .debug_aranges
-                0x00000000000000e4       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+                0x00000000000000e4       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
  .debug_aranges
-                0x00000000000000f8       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+                0x00000000000000f8       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
  .debug_aranges
-                0x000000000000010c       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+                0x000000000000010c       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
  .debug_aranges
-                0x0000000000000120       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+                0x0000000000000120       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
  .debug_aranges
-                0x0000000000000134       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+                0x0000000000000134       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
 
 .debug_pubnames
  *(.debug_pubnames)
@@ -1139,14 +1139,14 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
  .debug_info    0x000000000000180b      0x35d rf1a.o
  .debug_info    0x0000000000001b68      0x121 pmm.o
  .debug_info    0x0000000000001c89      0x5d8 swap.o
- .debug_info    0x0000000000002261      0x111 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
- .debug_info    0x0000000000002372       0x71 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
- .debug_info    0x00000000000023e3       0x71 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
- .debug_info    0x0000000000002454       0x71 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
- .debug_info    0x00000000000024c5       0x71 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
- .debug_info    0x0000000000002536       0x71 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
- .debug_info    0x00000000000025a7       0x71 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
- .debug_info    0x0000000000002618       0x71 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+ .debug_info    0x0000000000002261      0x111 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_info    0x0000000000002372       0x71 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+ .debug_info    0x00000000000023e3       0x71 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+ .debug_info    0x0000000000002454       0x71 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+ .debug_info    0x00000000000024c5       0x71 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+ .debug_info    0x0000000000002536       0x71 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+ .debug_info    0x00000000000025a7       0x71 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+ .debug_info    0x0000000000002618       0x71 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev   0x0000000000000000      0xba4
@@ -1156,30 +1156,30 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
  .debug_abbrev  0x000000000000068a      0x164 rf1a.o
  .debug_abbrev  0x00000000000007ee       0xa4 pmm.o
  .debug_abbrev  0x0000000000000892      0x1e0 swap.o
- .debug_abbrev  0x0000000000000a72       0xa6 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
- .debug_abbrev  0x0000000000000b18       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
- .debug_abbrev  0x0000000000000b2c       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
- .debug_abbrev  0x0000000000000b40       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
- .debug_abbrev  0x0000000000000b54       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
- .debug_abbrev  0x0000000000000b68       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
- .debug_abbrev  0x0000000000000b7c       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
- .debug_abbrev  0x0000000000000b90       0x14 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+ .debug_abbrev  0x0000000000000a72       0xa6 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_abbrev  0x0000000000000b18       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+ .debug_abbrev  0x0000000000000b2c       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+ .debug_abbrev  0x0000000000000b40       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+ .debug_abbrev  0x0000000000000b54       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+ .debug_abbrev  0x0000000000000b68       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+ .debug_abbrev  0x0000000000000b7c       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+ .debug_abbrev  0x0000000000000b90       0x14 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
 
-.debug_line     0x0000000000000000      0xd16
+.debug_line     0x0000000000000000      0xd39
  *(.debug_line)
- .debug_line    0x0000000000000000      0x340 rfloader.o
- .debug_line    0x0000000000000340      0x205 cc430radio.o
- .debug_line    0x0000000000000545      0x1e3 rf1a.o
- .debug_line    0x0000000000000728      0x12c pmm.o
- .debug_line    0x0000000000000854      0x15e swap.o
- .debug_line    0x00000000000009b2      0x109 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
- .debug_line    0x0000000000000abb       0x54 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
- .debug_line    0x0000000000000b0f       0x54 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
- .debug_line    0x0000000000000b63       0x59 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
- .debug_line    0x0000000000000bbc       0x59 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
- .debug_line    0x0000000000000c15       0x55 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
- .debug_line    0x0000000000000c6a       0x54 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
- .debug_line    0x0000000000000cbe       0x58 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+ .debug_line    0x0000000000000000      0x347 rfloader.o
+ .debug_line    0x0000000000000347      0x20c cc430radio.o
+ .debug_line    0x0000000000000553      0x1ea rf1a.o
+ .debug_line    0x000000000000073d      0x133 pmm.o
+ .debug_line    0x0000000000000870      0x165 swap.o
+ .debug_line    0x00000000000009d5      0x109 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_line    0x0000000000000ade       0x54 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+ .debug_line    0x0000000000000b32       0x54 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+ .debug_line    0x0000000000000b86       0x59 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+ .debug_line    0x0000000000000bdf       0x59 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+ .debug_line    0x0000000000000c38       0x55 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+ .debug_line    0x0000000000000c8d       0x54 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+ .debug_line    0x0000000000000ce1       0x58 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
 
 .debug_frame    0x0000000000000000      0x22e
  *(.debug_frame)
@@ -1188,21 +1188,21 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
  .debug_frame   0x0000000000000106       0x8a rf1a.o
  .debug_frame   0x0000000000000190       0x3e pmm.o
  .debug_frame   0x00000000000001ce       0x34 swap.o
- .debug_frame   0x0000000000000202       0x2c /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_frame   0x0000000000000202       0x2c /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
 
-.debug_str      0x0000000000000000      0xe42
+.debug_str      0x0000000000000000      0xe17
  *(.debug_str)
- .debug_str     0x0000000000000000      0xb18 rfloader.o
-                                        0xc13 (size before relaxing)
- .debug_str     0x0000000000000b18       0x3c cc430radio.o
-                                        0x468 (size before relaxing)
- .debug_str     0x0000000000000b54      0x19c rf1a.o
-                                        0x2d8 (size before relaxing)
- .debug_str     0x0000000000000cf0       0x70 pmm.o
-                                        0x189 (size before relaxing)
- .debug_str     0x0000000000000d60        0xf swap.o
-                                        0x62a (size before relaxing)
- .debug_str     0x0000000000000d6f       0xd3 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_str     0x0000000000000000      0xaed rfloader.o
+                                        0xbe8 (size before relaxing)
+ .debug_str     0x0000000000000aed       0x3c cc430radio.o
+                                        0x43d (size before relaxing)
+ .debug_str     0x0000000000000b29      0x19c rf1a.o
+                                        0x2ad (size before relaxing)
+ .debug_str     0x0000000000000cc5       0x70 pmm.o
+                                        0x15e (size before relaxing)
+ .debug_str     0x0000000000000d35        0xf swap.o
+                                        0x5ff (size before relaxing)
+ .debug_str     0x0000000000000d44       0xd3 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
                                         0x121 (size before relaxing)
 
 .debug_loc      0x0000000000000000      0x87d
@@ -1212,7 +1212,7 @@ LOAD /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gc
  .debug_loc     0x00000000000004b4      0x16c rf1a.o
  .debug_loc     0x0000000000000620       0x26 pmm.o
  .debug_loc     0x0000000000000646       0x80 swap.o
- .debug_loc     0x00000000000006c6      0x1b7 /home/daniel/applications/arduino-1.6.1/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_loc     0x00000000000006c6      0x1b7 /home/daniel/.arduino15/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
 
 .debug_macinfo  0x0000000000000000    0x51261
  *(.debug_macinfo)

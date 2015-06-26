@@ -120,7 +120,7 @@ class CC430FLASH
       
       if (*memAddress == buffer[i])        // Check flash contents before skipping to the next position
       {
-        *memAddress++;
+        memAddress++;
         i++;
       }
     }
