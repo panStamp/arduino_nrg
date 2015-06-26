@@ -1,9 +1,9 @@
 
 # Configure serial port and path to the toolchain, acording to your settings
 SERPORT = /dev/ttyUSB1
-ARDUINO_ROOT = ~/applications/arduino-1.6.1/
-TOOLCHAIN = $(ARDUINO_ROOT)/hardware/tools/msp430/bin/msp430-
-JAVA_BSL = $(ARDUINO_ROOT)/app/BsLoader/dist/BsLoader.jar
+ARDUINO_ROOT = ~/.arduino15
+TOOLCHAIN = $(ARDUINO_ROOT)/packages/panstamp_nrg/tools/msp430-gcc/4.6.3/bin/msp430-
+JAVA_BSL = $(ARDUINO_ROOT)/packages/panstamp_nrg/tools/java-bsl/1.0.0/BsLoader.jar
 
 MCU = cc430f5137
 SRCS ?= rfloader.cpp cc430radio.cpp rf1a.cpp pmm.cpp swap.cpp
