@@ -85,6 +85,14 @@ struct RTCDATA
 #define RTC_SET_HOUR_ALARM(hour)           (RTCAHOUR = (hour & 0x1F) | 0x80)
 #define RTC_SET_MIN_ALARM(min)             (RTCAMIN = (min & 0x3F) | 0x80)
 
+#define RTC_GET_YEAR()                     RTCYEAR
+#define RTC_GET_MONTH()                    RTCMON
+#define RTC_GET_DAY()                      RTCDAY
+#define RTC_GET_DOW()                      RTCDOW
+#define RTC_GET_HOUR()                     RTCHOUR
+#define RTC_GET_MIN()                      RTCMIN
+#define RTC_GET_SEC()                      RTCSEC
+
 /**
  * RTC clock sources
  */
@@ -147,6 +155,16 @@ class CC430RTC
      * @param rtcData pointer to struct containing date, time and alarm information
      */
     void startCalendar(RTCDATA* rtcData);
+
+    /**
+     * startCalendar
+     * 
+     * Start RTC module in calendar mode
+     */
+    inline void startCalendar(void)
+    {
+      RTCA_START();
+    }
     
     /**
      * stopCalendar
