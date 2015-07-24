@@ -242,7 +242,7 @@ const uint8_t digital_pin_to_port[] = {
   P3,           /* P3.4 */
   P3,           /* P3.5 */
   P3,           /* P3.6 */  
-	PJ            /* P3.7 -> ONBOARD_LED */
+	P3            /* P3.7 -> ONBOARD_LED */
 };
 
 const uint8_t digital_pin_to_bit_mask[] = {
