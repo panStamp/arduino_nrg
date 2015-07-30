@@ -74,6 +74,9 @@ void CC430RADIO::init(uint8_t freq, uint8_t mode)
   MRFI_CLEAR_SYNC_PIN_INT_FLAG();
   MRFI_CLEAR_GDO0_INT_FLAG();
   
+  // Disable Rx and enter in IDLE state
+  setRxOffState();
+
   // Enter RX state
   setRxOnState();
 }
