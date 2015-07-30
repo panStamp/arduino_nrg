@@ -3,7 +3,7 @@
 menu.rfloader=Wireless bootloader
 
 ##############################################################
-nrg2.name=panStamp NRG w/ cc430f5137 v.2.0
+nrg2.name=panStamp NRG 2 w/ cc430f5137
 nrg2.build.core=panstamp
 nrg2.upload.tool=ti-bsl
 nrg2.upload.protocol=ti-bsl
@@ -26,7 +26,7 @@ nrg2.menu.rfloader.enabled=on
 nrg2.menu.rfloader.enabled.ldscript=ldscript_rf
 
 ##############################################################
-nrg1.name=panStamp NRG w/ cc430f5137 v.1.1
+nrg1.name=panStamp NRG 1.1 w/ cc430f5137
 nrg1.build.core=panstamp
 nrg1.upload.tool=ti-bsl
 nrg1.upload.protocol=ti-bsl
@@ -49,7 +49,7 @@ nrg1.menu.rfloader.enabled=on
 nrg1.menu.rfloader.enabled.ldscript=ldscript_rf
 
 ##############################################################
-nrg0.name=panStamp NRG w/ cc430f5137 v.1.0
+nrg0.name=panStamp NRG 1.0 w/ cc430f5137
 nrg0.build.core=panstamp
 nrg0.upload.tool=msp430-gdb
 nrg0.upload.protocol=msp430-gdb
