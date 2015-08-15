@@ -104,7 +104,7 @@ static const uint8_t A11 = 128 + 11; // special. This is Vcc/2
 //      (D12/A4) P2.4  6|             |22  P1.0 (SPI_MOSI) (D0)
 //      (D11/A3) P2.3  7|             |21  P1.1 (SPI_MISO) (D1) (PWM)
 //      (D10/A2) P2.2  8|             |20  P1.2 (SPI_SCK) (D2) (PWM)
-//       (D9/A1) P2.1  9|             |19  P1.3 (I-C_SDA) (D3) (PWM)
+//       (D9/A1) P2.1  9|             |19  P1.3 (I2C_SDA) (D3) (PWM)
 //       (D8/A0) P2.0 10|             |18  P1.4 (I2C_SCL) (D4) (PWM)
 //                      +-------------+
 //                       | | | | | | |
@@ -113,7 +113,7 @@ static const uint8_t A11 = 128 + 11; // special. This is Vcc/2
 //                         VCC | P1.7 (D7)
 //                            GND
 //
-//                    ONBOARD_LED -- P3.7
+//                    ONBOARD_LED -- P3.7 (D23)
 
 
 const uint16_t digital_pin_to_pmap[] = {
@@ -242,7 +242,7 @@ const uint8_t digital_pin_to_port[] = {
   P3,           /* P3.4 */
   P3,           /* P3.5 */
   P3,           /* P3.6 */  
-	PJ            /* P3.7 -> ONBOARD_LED */
+	P3            /* P3.7 -> ONBOARD_LED */
 };
 
 const uint8_t digital_pin_to_bit_mask[] = {
