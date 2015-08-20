@@ -31,6 +31,7 @@
 #include <string.h>
 #include <math.h>
 #include "pins.h"
+#include "binary.h"
 
 /**
  * System clock
