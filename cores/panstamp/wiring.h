@@ -198,4 +198,9 @@ uint8_t shiftIn(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder);
  */
 #define map(x, in_min, in_max, out_min, out_max) ((x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min)
 
+// WMath prototypes
+long random(long);
+long random(long, long);
+void randomSeed(unsigned int);
+
 #endif
