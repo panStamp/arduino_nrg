@@ -65,8 +65,9 @@ void radioISR(void)
             if (panstamp.ccPacketReceived != NULL)
               panstamp.ccPacketReceived(&ccPacket);
           }
-          MRFI_ENABLE_SYNC_PIN_INT();
         }
+
+        MRFI_ENABLE_SYNC_PIN_INT();
       }
     }
     // Check for RF_RDY (Event1 WOR) interrupt
