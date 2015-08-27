@@ -48,8 +48,9 @@ class HardwareSerial : public Stream
      * Initialize UART port
      *
      * @param baud Serial baudrate
+     * @param config additional UART configuration
      */
-    void begin(uint32_t baud);
+    void begin(uint32_t baud, uint8_t config=SERIAL_8N1);
 
     /**
      * write

@@ -29,6 +29,20 @@
 
 #define SERIAL_BUFFER_SIZE 64
 
+// Define config for Serial.begin(baud, config);
+#define SERIAL_7N1 0x10
+#define SERIAL_8N1 0x00
+#define SERIAL_7N2 0x18
+#define SERIAL_8N2 0x08
+#define SERIAL_7E1 0xD0
+#define SERIAL_8E1 0xC0
+#define SERIAL_7E2 0xD8
+#define SERIAL_8E2 0xC8
+#define SERIAL_7O1 0x90
+#define SERIAL_8O1 0x80
+#define SERIAL_7O2 0x98
+#define SERIAL_8O2 0x88
+
 class CC430UART
 {   
   public:
@@ -53,8 +67,9 @@ class CC430UART
      * Initialize UART port
      *
      * @param baud Serial baudrate
+     * @param config additional UART configuration
      */
-    void begin(uint32_t baud);
+    void begin(uint32_t baud, uint8_t config=SERIAL_8N1);
 
     /**
      * end

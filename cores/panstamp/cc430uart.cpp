@@ -36,8 +36,9 @@ uint8_t CC430UART::rxIndex = 0;
  * Initialize UART port
  *
  * @param baud Serial baudrate
+ * @param config additional UART configuration
  */
-void CC430UART::begin(uint32_t baud)
+void CC430UART::begin(uint32_t baud, uint8_t config)
 {
 	uint16_t ucbrf, divider;
   uint32_t clkfreq = SYSTEM_CLK_FREQ;
@@ -54,7 +55,7 @@ void CC430UART::begin(uint32_t baud)
 
 	UCA0CTL1 = UCSWRST;
 	UCA0CTL1 |= UCSSEL_2;  // SMCLK
-	UCA0CTL0 = 0;
+	UCA0CTL0 = config;
 	UCA0ABCTL = 0;
 
   divider = (clkfreq >> 4)/baud;

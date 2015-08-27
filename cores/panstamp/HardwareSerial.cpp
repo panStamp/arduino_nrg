@@ -30,10 +30,11 @@
  * Initialize UART port
  *
  * @param baud Serial baudrate
+ * @param config additional UART configuration
  */
-void HardwareSerial::begin(uint32_t baud)
+void HardwareSerial::begin(uint32_t baud, uint8_t config)
 {
-  uart.begin(baud);
+  uart.begin(baud, config);
 }
 
 /**
