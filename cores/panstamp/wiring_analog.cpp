@@ -82,6 +82,7 @@ uint16_t analogRead(uint8_t pin)
     // Map pin as analog input
     volatile uint8_t *map = digitalPinToPortMap(pin);
     PMAPPWD = 0x02D52;
+    PMAPCTL |= PMAPRECFG; // Leave Pin mapping open
     *map = PM_ANALOG;
     PMAPPWD = 0;
     
