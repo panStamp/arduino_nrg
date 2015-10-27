@@ -28,8 +28,6 @@
 /**
  * Macros
  */
-// Enter Tx state
-#define setTxState()              Strobe(RF_STX)
 // Enter IDLE state
 #define setIdleState()            Strobe(RF_SIDLE)
 // Flush Rx FIFO
@@ -49,6 +47,8 @@ CC430RADIO::CC430RADIO(void)
   syncWord[0] = CCDEF_SYNC1;
   syncWord[1] = CCDEF_SYNC0;
   devAddress = CCDEF_ADDR;
+
+  hgmEnabled = false;
 }
 
 /**
@@ -255,6 +255,10 @@ void CC430RADIO::setRxOnState(void)
   MRFI_ENABLE_SYNC_PIN_INT();
 
   rfState = RFSTATE_RXON;
+
+  // Enable LNA on LD-board if any
+  if (hgmEnabled)
+    enableLNA();
 }
 
 /**
@@ -281,6 +285,24 @@ void CC430RADIO::setRxOffState(void)
   MRFI_CLEAR_SYNC_PIN_INT_FLAG();
 
   rfState = RFSTATE_RXOFF;
+
+  // Disable LNA on LD-board if any
+  if (hgmEnabled)
+    disableLNA();
+}
+
+/**
+ * setTxState
+ * 
+ * Enter Tx state
+ */
+void CC430RADIO::setTxState(void)
+{
+  // Enable PA on LD-board if any
+  if (hgmEnabled)
+    enablePA();
+
+  Strobe(RF_STX);
 }
 
 /**
@@ -354,6 +376,7 @@ bool CC430RADIO::sendData(CCPACKET packet)
   WriteBurstReg(RF_TXFIFOWR, packet.data, packet.length);
 
   MRFI_CLEAR_GDO0_INT_FLAG();
+
   // Transmit
   setTxState();
 

@@ -168,6 +168,44 @@ class CC430RADIO
      */
     uint8_t rfState;
 
+    /**
+     * High-gain mode enabled on the LD-board
+     */
+    bool hgmEnabled;
+
+    /**
+     * enablePA
+     *
+     * Enable PA and disable LNA on the LD-Board
+     */
+     inline void enablePA(void)
+     {
+       digitalWrite(PA_EN, HIGH);
+       digitalWrite(LNA_EN, LOW);
+     }
+
+    /**
+     * enableLNA
+     *
+     * Enable LNA and disable PA on the LD-Board
+     */
+     inline void enableLNA(void)
+     {
+       digitalWrite(LNA_EN, HIGH);
+       digitalWrite(PA_EN, LOW);
+     }
+
+    /**
+     * disableLNA
+     *
+     * Disable LNA and PA on the LD-Board
+     */
+     inline void disableLNA(void)
+     {
+       digitalWrite(LNA_EN, LOW);
+       digitalWrite(PA_EN, LOW);
+     }
+
   public:
     /**
      * Carrier frequency
@@ -238,6 +276,13 @@ class CC430RADIO
      * Disable Rx mode
      */
     void setRxOffState(void);
+
+    /**
+     * setTxState
+     * 
+     * Enter Tx state
+     */
+    void setTxState(void);
 
     /**
      * setSyncWord
@@ -358,6 +403,34 @@ class CC430RADIO
     {
       WritePATable(paLevel);
     }
+
+    /**
+     * enableHGM
+     *
+     * Enable Long-distance board with CC1190 IC in high-gain mode
+     */
+     inline void enableHGM(void)
+     {
+       hgmEnabled = true;
+
+       pinMode(HGM, OUTPUT);
+       pinMode(LNA_EN, OUTPUT);
+       pinMode(PA_EN, OUTPUT);
+
+       digitalWrite(HGM, HIGH);
+     }
+
+    /**
+     * disableHGM
+     *
+     * Disable high-gain mode on the LD-Board
+     */
+     inline void disableHGM(void)
+     {
+       hgmEnabled = false;
+
+       digitalWrite(HGM, LOW);
+     }
 };
 
 #endif
