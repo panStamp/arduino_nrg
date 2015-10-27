@@ -72,7 +72,7 @@ tools.msp430-gdb.cmd.path={runtime.tools.msp430-gcc.path}/bin/msp430-gdb
 tools.msp430-gdb.upload.params.verbose=
 tools.msp430-gdb.upload.params.quiet=
 #tools.msp430-gdb.upload.pattern={cmd.path} -b 38400 -ex 'target remote {serial.port}' -ex 'set debug remote 0' {build.path}/{build.project_name}.elf -ex 'erase' -ex 'load' -ex 'quit'
-  tools.msp430-gdb.upload.pattern=java -cp {runtime.tools.java-gdb.path}/ GdbLoader {cmd.path} {build.path}/{build.project_name}.elf {serial.port}
+tools.msp430-gdb.upload.pattern=java -cp {runtime.tools.java-gdb.path}/ GdbLoader {cmd.path} {build.path}/{build.project_name}.elf {serial.port}
 
 # FET430 programmer
 tools.rf2500.upload.params.verbose=
