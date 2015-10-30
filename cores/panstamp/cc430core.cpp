@@ -185,9 +185,8 @@ void CC430CORE::init(uint8_t vCore, uint16_t dcorsel, uint16_t flln)
   REFCTL0 &= ~REFON;
   REFCTL0 |= REFTCOFF;  // Temp sensor disabled
   
-  // Config pins as outputs by default
+  // Config pins as outputs by default except P2, wich contains the ADC inputs
   P1DIR = 0xFF;
-  P2DIR = 0xFF;
   P3DIR = 0xFF;
   PJDIR = 0xFF;
 }

@@ -139,9 +139,6 @@ uint16_t analogRead(uint8_t pin)
   REFCTL0 &= ~REFON;
   REFCTL0 |= REFTCOFF;  // Temp sensor disabled
 
-  // Config pin as output to save current
-  *dir |= bit;
-
   uint64_t result = ADC12MEM0;
 
   if (refGain)
