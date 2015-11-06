@@ -95,6 +95,11 @@ static const uint8_t A11 = 128 + 11; // special. This is Vcc/2
 // ADC resolution
 #define ADC_RESOLUTION  0xFFF
 
+// LD-BOARD definitions
+#define HGM     20
+#define LNA_EN  19
+#define PA_EN   18
+
 //                      +-----------+
 //               GND   1|    ||||   |24  GND
 //         (D16) P3.0  2|           |23  P1.0 (D0)
