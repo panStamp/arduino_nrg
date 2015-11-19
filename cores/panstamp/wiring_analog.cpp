@@ -124,7 +124,7 @@ uint16_t analogRead(uint8_t pin)
   ADC12MCTL0 |= channel;                          // Select channel
   ADC12IE = 0;                                    // Disable interrupt
   
-  __delay_cycles(250);
+  __delay_cycles(1100);
 
   ADC12CTL0 |= ADC12ENC | ADC12SC;                // Enable ADC and start conversion
 
