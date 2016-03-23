@@ -24,6 +24,10 @@
 
 #include "panstamp.h"
 
+#ifdef FHSS_ENABLED
+bool resetFHSS = false;
+#endif
+
 /**
  * radioISR
  *
@@ -59,11 +63,46 @@ void radioISR(void)
         // Any packet waiting to be read?
         if (panstamp.radio.receiveData(&ccPacket) > 0)
         {
+          #ifdef FHSS_ENABLED
+          // Stop FHSS dwelling timer
+          panstamp.stopDwellingTimer();
+    
+          // Reset FHSS channel and buffer?
+          if (resetFHSS)
+          {
+            resetFHSS = false;
+            panstamp.fhssPacket.length = 0;
+          }
+          #endif
+
           // Is CRC OK?
           if (ccPacket.crc_ok)
-          {            
+          {
+            #ifdef FHSS_ENABLED
+P3OUT |= BIT7;
+            if (panstamp.currentChannel < FHSS_MAX_HOPS)
+            {
+              panstamp.currentChannel++;
+
+              if ((panstamp.fhssPacket.length + ccPacket.length) < CCPACKET_DATA_LEN)
+              {
+                memcpy(panstamp.fhssPacket.data + panstamp.fhssPacket.length, ccPacket.data, ccPacket.length);
+                panstamp.fhssPacket.length += ccPacket.length;
+                panstamp.radio.setChannel(panstamp.currentChannel);
+                panstamp.startDwellingTimer();
+              }
+            }
+            else  // Back to the initial hop
+            {
+              panstamp.currentChannel = CCDEF_CHANNR;
+              panstamp.radio.setChannel(panstamp.currentChannel);
+              panstamp.fhssPacket.length = 0;
+            }
+
+            #else
             if (panstamp.ccPacketReceived != NULL)
               panstamp.ccPacketReceived(&ccPacket);
+            #endif
           }
         }
 
@@ -82,6 +121,33 @@ void radioISR(void)
   }
 }
 
+#ifdef FHSS_ENABLED
+/**
+ * DWELLING_TIMER_ISR
+ * 
+ * TimerA 0 ISR function - Dwelling timer ISR
+ */
+__attribute__((interrupt(TIMER0_A0_VECTOR)))
+void DWELLING_TIMER_ISR(void)
+{
+  panstamp.stopDwellingTimer();
+
+  // Any packet received?
+  if (panstamp.fhssPacket.length > 0)
+  {
+    // Call user function, if any
+    if (panstamp.ccPacketReceived != NULL)
+      panstamp.ccPacketReceived(&panstamp.fhssPacket);
+P3OUT &= ~BIT7;
+  }
+
+  // Dwelling time is over. Reset FHSS channel and buffer
+  resetFHSS = true;
+  panstamp.currentChannel = CCDEF_CHANNR;
+  panstamp.radio.setChannel(panstamp.currentChannel);
+}
+#endif
+
 /**
  * PANSTAMP
  *
@@ -90,6 +156,11 @@ void radioISR(void)
 PANSTAMP::PANSTAMP(void)
 {
   ccPacketReceived = NULL;
+
+  #ifdef FHSS_ENABLED
+  currentChannel = CCDEF_CHANNR;
+  fhssPacket.length = 0;
+  #endif
 }
 
 /**
@@ -197,7 +268,7 @@ void PANSTAMP::reset(void)
   WDTCTL = 0;
   while (1) {}
 }
-    
+   
 /**
  * Pre-instantiate PANSTAMP object
  */

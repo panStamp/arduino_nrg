@@ -57,6 +57,17 @@
 #define RTC_8S       0x07   // Timer 2 prescaler = 1024
 
 /**
+ * Frequency Hopping and Spread Spectrum (FHSS)
+ */
+#define FHSS_ENABLED 1
+#ifdef FHSS_ENABLED
+#define FHSS_DWELLING_TIME 100
+#define FHSS_MAX_HOPS 50
+#define FHSS_BURST_LENGTH 5
+#endif
+
+
+/**
  * Macros
  */
 #define setPacketRxCallback(ptrFunc)     ccPacketReceived = ptrFunc
@@ -75,6 +86,18 @@
 class PANSTAMP
 {
   public:
+    #ifdef FHSS_ENABLED
+    /**
+     * Current FHSS channel
+     */
+    uint8_t currentChannel;
+
+    /**
+     * Accumulative packet fro FHSS purposes
+     */
+    CCPACKET fhssPacket;
+    #endif
+
     /**
      * Radio interface
      */
@@ -149,7 +172,7 @@ class PANSTAMP
      * @param source Source of interruption (RTCSRC_VLO or RTCSRC_XT1)
      */
     void sleepSec(uint16_t time, RTCSRC source=RTCSRC_XT1);
-    
+
     /**
      * attachInterrupt
      * 
@@ -214,6 +237,67 @@ class PANSTAMP
        p = (void (*)(void))WIRELESS_BOOT_ADDR;
        (*p)(); 
      }
+
+    #ifdef FHSS_ENABLED
+    /**
+     * startDwellingTimer
+     *
+     * Start FHSS dwelling timer
+     */
+    inline void startDwellingTimer(void)
+    {
+      TA0CCTL0 = CCIE;                          // CCR0 interrupt enabled
+      TA0CCR0 = 32.767 * FHSS_DWELLING_TIME;    // Max count
+      TA0CTL = TASSEL_1 + MC_1 + TACLR;         // ACLK, upmode, clear TAR
+    }
+
+    /**
+     * stopDwellingTimer
+     *
+     * Stop FHSS dwelling timer
+     */
+    inline void stopDwellingTimer(void)
+    {
+      TA0CTL = MC_0;                            // Halt timer
+    }
+    #endif
+
+    /**
+     * sendData
+     *
+     * Transmit packet
+     *
+     * @param packet Packet to be transmitted. First byte is the destination address
+     */
+    inline void sendData(CCPACKET packet)
+    {
+      #ifdef FHSS_ENABLED
+
+      CCPACKET tmpPacket;
+      uint8_t i, nbOfBursts = packet.length / FHSS_BURST_LENGTH;
+      uint8_t lengthOfLastBurst = packet.length % FHSS_BURST_LENGTH;
+
+      for(i=0 ; i<nbOfBursts ; i++)
+      {
+        memcpy(tmpPacket.data, packet.data + i*FHSS_BURST_LENGTH, FHSS_BURST_LENGTH);
+        tmpPacket.length = FHSS_BURST_LENGTH;
+        radio.sendData(tmpPacket);
+        currentChannel++;
+        radio.setChannel(currentChannel);
+      }
+      if (lengthOfLastBurst > 0)
+      {
+        memcpy(tmpPacket.data, packet.data + i*FHSS_BURST_LENGTH, lengthOfLastBurst);
+        tmpPacket.length = lengthOfLastBurst;
+        radio.sendData(tmpPacket);
+      }
+      // Back to the initial hop
+      currentChannel = CCDEF_CHANNR;
+      radio.setChannel(currentChannel);
+      #else
+        radio.sendData(packet);
+      #endif
+    }
 };
 
 /**
