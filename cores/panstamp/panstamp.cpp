@@ -26,6 +26,10 @@
 
 #ifdef FHSS_ENABLED
 bool resetFHSS = false;
+
+uint8_t PANSTAMP::hopSequence[] = {22,32,25,34,41,19,43,23,9,30,7,39,46,2,42,5,8,13,24,3,40,11,35,38,45,
+                                   33,10,26,1,28,18,15,21,12,48,50,27,44,37,36,20,14,47,6,16,49,17,29,4,31};
+};
 #endif
 
 /**
@@ -82,20 +86,20 @@ void radioISR(void)
 P3OUT |= BIT7;
             if (panstamp.currentChannel < FHSS_MAX_HOPS)
             {
-              panstamp.currentChannel++;
+              panstamp.currentChannelIndex++;
 
               if ((panstamp.fhssPacket.length + ccPacket.length) < CCPACKET_DATA_LEN)
               {
                 memcpy(panstamp.fhssPacket.data + panstamp.fhssPacket.length, ccPacket.data, ccPacket.length);
                 panstamp.fhssPacket.length += ccPacket.length;
-                panstamp.radio.setChannel(panstamp.currentChannel);
+                panstamp.radio.setChannel(panstamp.getCurrentChannel());
                 panstamp.startDwellingTimer();
               }
             }
             else  // Back to the initial hop
             {
-              panstamp.currentChannel = CCDEF_CHANNR;
-              panstamp.radio.setChannel(panstamp.currentChannel);
+              panstamp.currentChannelIndex = 0;
+              panstamp.radio.setChannel(panstamp.getCurrentChannel());
               panstamp.fhssPacket.length = 0;
             }
 
@@ -143,8 +147,8 @@ P3OUT &= ~BIT7;
 
   // Dwelling time is over. Reset FHSS channel and buffer
   resetFHSS = true;
-  panstamp.currentChannel = CCDEF_CHANNR;
-  panstamp.radio.setChannel(panstamp.currentChannel);
+  panstamp.currentChannelIndex = 0;
+  panstamp.radio.setChannel(panstamp.getCurrentChannel());
 }
 #endif
 
@@ -158,7 +162,7 @@ PANSTAMP::PANSTAMP(void)
   ccPacketReceived = NULL;
 
   #ifdef FHSS_ENABLED
-  currentChannel = CCDEF_CHANNR;
+  currentChannelIndex = 0;
   fhssPacket.length = 0;
   #endif
 }
@@ -189,6 +193,10 @@ void PANSTAMP::init(uint8_t freq, uint8_t mode)
 
   // Setup radio interface
   radio.init(freq, mode);
+
+  #ifdef FHSS_ENABLED
+  radio.setChannel(getCurrentChannel());
+  #endif
 
   delayMicroseconds(50);
 }
@@ -256,6 +264,43 @@ void PANSTAMP::sleepSec(uint16_t time, RTCSRC source)
    
   // Wake-up radio
   radio.setRxState();
+}
+
+/**
+ * sendData
+ *
+ * Transmit packet
+ *
+ * @param packet Packet to be transmitted. First byte is the destination address
+ */
+void PANSTAMP::sendData(CCPACKET packet)
+{
+  #ifdef FHSS_ENABLED
+
+  CCPACKET tmpPacket;
+  uint8_t i, nbOfBursts = packet.length / FHSS_BURST_LENGTH;
+  uint8_t lengthOfLastBurst = packet.length % FHSS_BURST_LENGTH;
+
+  for(i=0 ; i<nbOfBursts ; i++)
+  {
+    memcpy(tmpPacket.data, packet.data + i*FHSS_BURST_LENGTH, FHSS_BURST_LENGTH);
+    tmpPacket.length = FHSS_BURST_LENGTH;
+    radio.sendData(tmpPacket);
+    currentChannelIndex++;
+    radio.setChannel(getCurrentChannel());
+  }
+  if (lengthOfLastBurst > 0)
+  {
+    memcpy(tmpPacket.data, packet.data + i*FHSS_BURST_LENGTH, lengthOfLastBurst);
+    tmpPacket.length = lengthOfLastBurst;
+    radio.sendData(tmpPacket);
+  }
+  // Back to the initial hop
+  currentChannelIndex = 0;
+  radio.setChannel(getCurrentChannel());
+  #else
+    radio.sendData(packet);
+  #endif
 }
 
 /**

@@ -88,14 +88,19 @@ class PANSTAMP
   public:
     #ifdef FHSS_ENABLED
     /**
-     * Current FHSS channel
+     * Current FHSS channel index
      */
-    uint8_t currentChannel;
+    uint8_t currentChannelIndex;
 
     /**
      * Accumulative packet fro FHSS purposes
      */
     CCPACKET fhssPacket;
+
+    /**
+     * FHSS hopping sequence
+     */
+    static uint8_t hopSequence[FHSS_MAX_HOPS];
     #endif
 
     /**
@@ -260,44 +265,17 @@ class PANSTAMP
     {
       TA0CTL = MC_0;                            // Halt timer
     }
-    #endif
 
     /**
-     * sendData
+     * getCurrentChannel
      *
-     * Transmit packet
-     *
-     * @param packet Packet to be transmitted. First byte is the destination address
+     * Get current hopping channel
      */
-    inline void sendData(CCPACKET packet)
+    inline uint8_t getCurrentChannel(void)
     {
-      #ifdef FHSS_ENABLED
-
-      CCPACKET tmpPacket;
-      uint8_t i, nbOfBursts = packet.length / FHSS_BURST_LENGTH;
-      uint8_t lengthOfLastBurst = packet.length % FHSS_BURST_LENGTH;
-
-      for(i=0 ; i<nbOfBursts ; i++)
-      {
-        memcpy(tmpPacket.data, packet.data + i*FHSS_BURST_LENGTH, FHSS_BURST_LENGTH);
-        tmpPacket.length = FHSS_BURST_LENGTH;
-        radio.sendData(tmpPacket);
-        currentChannel++;
-        radio.setChannel(currentChannel);
-      }
-      if (lengthOfLastBurst > 0)
-      {
-        memcpy(tmpPacket.data, packet.data + i*FHSS_BURST_LENGTH, lengthOfLastBurst);
-        tmpPacket.length = lengthOfLastBurst;
-        radio.sendData(tmpPacket);
-      }
-      // Back to the initial hop
-      currentChannel = CCDEF_CHANNR;
-      radio.setChannel(currentChannel);
-      #else
-        radio.sendData(packet);
-      #endif
+      return hopSequence[currentChannelIndex];
     }
+    #endif
 };
 
 /**
