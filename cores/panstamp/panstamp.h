@@ -39,8 +39,8 @@
 /**
  * Default working mode
  */
-#define DEFAULT_WORKING_MODE  0  // Speed = 38 Kbps
-//#define DEFAULT_WORKING_MODE  MODE_LOW_SPEED  // Speed = 4800 bps
+//#define DEFAULT_WORKING_MODE  0  // Speed = 38 Kbps
+#define DEFAULT_WORKING_MODE  MODE_LOW_SPEED  // Speed = 4800 bps
 
 /**
  * Alias
@@ -61,7 +61,7 @@
  */
 #define FHSS_ENABLED 1
 #ifdef FHSS_ENABLED
-#define FHSS_DWELLING_TIME 100
+#define FHSS_DWELLING_TIME 40
 #define FHSS_MAX_HOPS 50
 #define FHSS_BURST_LENGTH 5
 #endif
@@ -242,6 +242,19 @@ class PANSTAMP
        p = (void (*)(void))WIRELESS_BOOT_ADDR;
        (*p)(); 
      }
+
+    /**
+     * sendData
+     *
+     * Transmit packet
+     *
+     * @param packet Packet to be transmitted. First byte is the destination address
+     *
+     * @return
+     *  True if the transmission succeeds
+     *  False otherwise
+     */
+    bool sendData(CCPACKET packet);
 
     #ifdef FHSS_ENABLED
     /**
