@@ -29,7 +29,8 @@ bool resetFHSS = false;
 
 uint8_t PANSTAMP::hopSequence[] = {22,32,25,34,41,19,43,23,9,30,7,39,46,2,42,5,8,13,24,3,40,11,35,38,45,
                                    33,10,26,1,28,18,15,21,12,48,50,27,44,37,36,20,14,47,6,16,49,17,29,4,31};
-};
+
+bool newPacket = true;
 #endif
 
 /**
@@ -83,8 +84,7 @@ void radioISR(void)
           if (ccPacket.crc_ok)
           {
             #ifdef FHSS_ENABLED
-P3OUT |= BIT7;
-            if (panstamp.currentChannel < FHSS_MAX_HOPS)
+            if (panstamp.getCurrentChannel() < FHSS_MAX_HOPS)
             {
               panstamp.currentChannelIndex++;
 
@@ -92,6 +92,15 @@ P3OUT |= BIT7;
               {
                 memcpy(panstamp.fhssPacket.data + panstamp.fhssPacket.length, ccPacket.data, ccPacket.length);
                 panstamp.fhssPacket.length += ccPacket.length;
+
+                // First burst of packet?
+                if (newPacket)
+                {
+                  newPacket = false;
+                  panstamp.fhssPacket.lqi = ccPacket.lqi;
+                  panstamp.fhssPacket.rssi = ccPacket.rssi;
+                }
+
                 panstamp.radio.setChannel(panstamp.getCurrentChannel());
                 panstamp.startDwellingTimer();
               }
@@ -142,10 +151,10 @@ void DWELLING_TIMER_ISR(void)
     // Call user function, if any
     if (panstamp.ccPacketReceived != NULL)
       panstamp.ccPacketReceived(&panstamp.fhssPacket);
-P3OUT &= ~BIT7;
   }
 
   // Dwelling time is over. Reset FHSS channel and buffer
+  newPacket = true;
   resetFHSS = true;
   panstamp.currentChannelIndex = 0;
   panstamp.radio.setChannel(panstamp.getCurrentChannel());
@@ -193,6 +202,8 @@ void PANSTAMP::init(uint8_t freq, uint8_t mode)
 
   // Setup radio interface
   radio.init(freq, mode);
+
+  delayMicroseconds(50);
 
   #ifdef FHSS_ENABLED
   radio.setChannel(getCurrentChannel());
@@ -272,8 +283,12 @@ void PANSTAMP::sleepSec(uint16_t time, RTCSRC source)
  * Transmit packet
  *
  * @param packet Packet to be transmitted. First byte is the destination address
+ *
+ * @return
+ *  True if the transmission succeeds
+ *  False otherwise
  */
-void PANSTAMP::sendData(CCPACKET packet)
+bool PANSTAMP::sendData(CCPACKET packet)
 {
   #ifdef FHSS_ENABLED
 
@@ -285,7 +300,8 @@ void PANSTAMP::sendData(CCPACKET packet)
   {
     memcpy(tmpPacket.data, packet.data + i*FHSS_BURST_LENGTH, FHSS_BURST_LENGTH);
     tmpPacket.length = FHSS_BURST_LENGTH;
-    radio.sendData(tmpPacket);
+    if (!radio.sendData(tmpPacket))
+      return false;
     currentChannelIndex++;
     radio.setChannel(getCurrentChannel());
   }
@@ -293,13 +309,17 @@ void PANSTAMP::sendData(CCPACKET packet)
   {
     memcpy(tmpPacket.data, packet.data + i*FHSS_BURST_LENGTH, lengthOfLastBurst);
     tmpPacket.length = lengthOfLastBurst;
-    radio.sendData(tmpPacket);
+    if (!radio.sendData(tmpPacket))
+      return false;
   }
   // Back to the initial hop
   currentChannelIndex = 0;
   radio.setChannel(getCurrentChannel());
+
+  return true;
+
   #else
-    radio.sendData(packet);
+    return radio.sendData(packet);
   #endif
 }
 
