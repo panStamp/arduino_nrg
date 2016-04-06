@@ -145,6 +145,12 @@ void DWELLING_TIMER_ISR(void)
 {
   panstamp.stopDwellingTimer();
 
+  // Dwelling time is over. Reset FHSS channel and buffer
+  newPacket = true;
+  resetFHSS = true;
+  panstamp.currentChannelIndex = 0;
+  panstamp.radio.setChannel(panstamp.getCurrentChannel());
+
   // Any packet received?
   if (panstamp.fhssPacket.length > 0)
   {
@@ -152,12 +158,6 @@ void DWELLING_TIMER_ISR(void)
     if (panstamp.ccPacketReceived != NULL)
       panstamp.ccPacketReceived(&panstamp.fhssPacket);
   }
-
-  // Dwelling time is over. Reset FHSS channel and buffer
-  newPacket = true;
-  resetFHSS = true;
-  panstamp.currentChannelIndex = 0;
-  panstamp.radio.setChannel(panstamp.getCurrentChannel());
 }
 #endif
 
