@@ -31,6 +31,8 @@ uint8_t PANSTAMP::hopSequence[] = {22,32,25,34,41,19,43,23,9,30,7,39,46,2,42,5,8
                                    33,10,26,1,28,18,15,21,12,48,50,27,44,37,36,20,14,47,6,16,49,17,29,4,31};
 
 bool newPacket = true;
+
+void endOfReception(void);
 #endif
 
 /**
@@ -101,8 +103,17 @@ void radioISR(void)
                   panstamp.fhssPacket.rssi = ccPacket.rssi;
                 }
 
-                panstamp.radio.setChannel(panstamp.getCurrentChannel());
-                panstamp.startDwellingTimer();
+                // Burst length = max allowed length?
+                if (ccPacket.length == FHSS_BURST_LENGTH)
+                {
+                  // OK, there is probably another burst that is coming
+                  panstamp.radio.setChannel(panstamp.getCurrentChannel());
+                  panstamp.startDwellingTimer();
+                }
+                else // ccPacket.length < FHSS_BURST_LENGTH // this means end of packet transmission
+                {
+                  endOfReception();
+                }
               }
             }
             else  // Back to the initial hop
@@ -136,12 +147,12 @@ void radioISR(void)
 
 #ifdef FHSS_ENABLED
 /**
- * DWELLING_TIMER_ISR
- * 
- * TimerA 0 ISR function - Dwelling timer ISR
+ * endOfReception
+ *
+ * End of FHSS reception. finish transmission and process packet
+ * received
  */
-__attribute__((interrupt(TIMER0_A0_VECTOR)))
-void DWELLING_TIMER_ISR(void)
+void endOfReception(void)
 {
   panstamp.stopDwellingTimer();
 
@@ -158,6 +169,17 @@ void DWELLING_TIMER_ISR(void)
     if (panstamp.ccPacketReceived != NULL)
       panstamp.ccPacketReceived(&panstamp.fhssPacket);
   }
+}
+
+/**
+ * DWELLING_TIMER_ISR
+ * 
+ * TimerA 0 ISR function - Dwelling timer ISR
+ */
+__attribute__((interrupt(TIMER0_A0_VECTOR)))
+void DWELLING_TIMER_ISR(void)
+{
+  endOfReception();
 }
 #endif
 
