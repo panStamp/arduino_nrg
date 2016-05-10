@@ -78,7 +78,10 @@ uint8_t CC430INFO::write(uint8_t *buffer, uint16_t section, uint16_t position, u
 
   __disable_interrupt();                 // 5xx Workaround: Disable global
                                          // interrupt while erasing
-  FCTL3 = FWKEY + LOCKA;                 // Clear Lock bit and unlock info A section
+  if (FCTL3 & LOCKA)
+    FCTL3 = FWKEY + LOCKA;               // Clear Lock bit and unlock info A section
+  else
+    FCTL3 = FWKEY;
   FCTL1 = FWKEY+ERASE;                   // Set Erase bit
   *flashPtr = 0;                         // Dummy write to erase Flash seg
   FCTL1 = FWKEY+WRT;                     // Set WRT bit for byte write operation
