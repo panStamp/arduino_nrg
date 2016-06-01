@@ -59,7 +59,7 @@
 /**
  * Frequency Hopping and Spread Spectrum (FHSS)
  */
-#define FHSS_ENABLED 1
+//#define FHSS_ENABLED 1
 #ifdef FHSS_ENABLED
 #define FHSS_DWELLING_TIME 40
 #define FHSS_MAX_HOPS 50
@@ -90,7 +90,7 @@ class PANSTAMP
     /**
      * Current FHSS channel index
      */
-    uint8_t currentChannelIndex;
+    volatile uint8_t currentChannelIndex;
 
     /**
      * Accumulative packet fro FHSS purposes

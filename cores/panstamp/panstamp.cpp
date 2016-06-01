@@ -63,7 +63,6 @@ void radioISR(void)
          *  exits then immediately starts again.  Most microcontrollers handle this
          *  naturally but it must be verified for every target.
          */
-
         MRFI_CLEAR_SYNC_PIN_INT_FLAG();
         MRFI_DISABLE_SYNC_PIN_INT();
 
@@ -180,6 +179,8 @@ __attribute__((interrupt(TIMER0_A0_VECTOR)))
 void DWELLING_TIMER_ISR(void)
 {
   endOfReception();
+  panstamp.radio.setRxOffState(); // Enter idle state
+  panstamp.radio.setRxOnState();  // Back to Rx state
 }
 #endif
 
@@ -313,7 +314,6 @@ void PANSTAMP::sleepSec(uint16_t time, RTCSRC source)
 bool PANSTAMP::sendData(CCPACKET packet)
 {
   #ifdef FHSS_ENABLED
-
   CCPACKET tmpPacket;
   uint8_t i, nbOfBursts = packet.length / FHSS_BURST_LENGTH;
   uint8_t lengthOfLastBurst = packet.length % FHSS_BURST_LENGTH;
@@ -334,10 +334,10 @@ bool PANSTAMP::sendData(CCPACKET packet)
     if (!radio.sendData(tmpPacket))
       return false;
   }
+
   // Back to the initial hop
   currentChannelIndex = 0;
   radio.setChannel(getCurrentChannel());
-
   return true;
 
   #else
