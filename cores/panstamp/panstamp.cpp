@@ -211,9 +211,9 @@ void PANSTAMP::init(uint8_t freq, uint8_t mode)
 {
   // Disable wireless bootloader
   enableWirelessBoot(false);
-  
+    
   // Initialize MCU core
-  core.init();
+  core.begin();
 
   // Initialize onboard LED pin
   INIT_ONBOARD_LED();

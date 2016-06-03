@@ -106,6 +106,24 @@ class CC430CORE
     void setNormalMode(void);
 
     /**
+     * begin
+     * 
+     * Initialize CC430 core depending on Vcc
+     */
+    inline void begin(void)
+    {
+      // Initialize MCU core with minimum COREV
+      init(0);
+      // Read Vcc
+      uint16_t vcc = getVcc();
+      // Depending on Vcc, adjust COREV
+      if (vcc > 2200)
+        init(2);
+      else if (vcc > 2000)
+        init(1);
+    }
+
+    /**
      * getUID
      * 
      * Read Die Record from Device Descriptor memory and build UID
