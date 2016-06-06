@@ -418,6 +418,7 @@ class CC430RADIO
        pinMode(PA_EN, OUTPUT);
 
        digitalWrite(HGM, HIGH);
+       enableLNA();
      }
 
     /**
