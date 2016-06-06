@@ -43,6 +43,7 @@ void endOfReception(void);
 __attribute__((interrupt(CC1101_VECTOR)))
 void radioISR(void)
 {
+static int count=0;
   unsigned int coreIntSource = RF1AIV;            // Radio Core      interrupt register
 
   // Radio Core interrupt
@@ -72,7 +73,7 @@ void radioISR(void)
           #ifdef FHSS_ENABLED
           // Stop FHSS dwelling timer
           panstamp.stopDwellingTimer();
-    
+
           // Reset FHSS channel and buffer?
           if (resetFHSS)
           {
@@ -229,6 +230,7 @@ void PANSTAMP::init(uint8_t freq, uint8_t mode)
   delayMicroseconds(50);
 
   #ifdef FHSS_ENABLED
+  radio.disableAddressCheck();
   radio.setChannel(getCurrentChannel());
   #endif
 
