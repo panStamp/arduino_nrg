@@ -43,7 +43,6 @@ void endOfReception(void);
 __attribute__((interrupt(CC1101_VECTOR)))
 void radioISR(void)
 {
-static int count=0;
   unsigned int coreIntSource = RF1AIV;            // Radio Core      interrupt register
 
   // Radio Core interrupt
@@ -316,6 +315,9 @@ void PANSTAMP::sleepSec(uint16_t time, RTCSRC source)
 bool PANSTAMP::sendData(CCPACKET packet)
 {
   #ifdef FHSS_ENABLED
+  currentChannelIndex = 0;
+  radio.setChannel(getCurrentChannel());
+
   CCPACKET tmpPacket;
   uint8_t i, nbOfBursts = packet.length / FHSS_BURST_LENGTH;
   uint8_t lengthOfLastBurst = packet.length % FHSS_BURST_LENGTH;
