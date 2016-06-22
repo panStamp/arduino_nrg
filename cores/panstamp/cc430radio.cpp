@@ -351,6 +351,7 @@ bool CC430RADIO::sendData(CCPACKET packet)
 {
   bool res = false;
   uint8_t marcState;
+  uint16_t count;
 
   MRFI_CLEAR_SYNC_PIN_INT_FLAG();
   MRFI_CLEAR_GDO0_INT_FLAG();
@@ -391,11 +392,19 @@ bool CC430RADIO::sendData(CCPACKET packet)
     return false;
   }
 
+  delayMicroseconds(250);
+  count = 0xFFFF;
   // Wait until packet transmission
-  while(!MRFI_GDO0_INT_FLAG_IS_SET());
+  while(!MRFI_GDO0_INT_FLAG_IS_SET() && count--);
 
+  if (!count)
+  {
+    setIdleState();       // Enter IDLE state
+    flushTxFifo();        // Flush Tx FIFO
+    res = false;
+  }
   // Check that the TX FIFO is empty
-  if((ReadSingleReg(TXBYTES) & 0x7F) == 0)
+  else if((ReadSingleReg(TXBYTES) & 0x7F) == 0)
     res = true;
 
   // Clear interrupt flags
