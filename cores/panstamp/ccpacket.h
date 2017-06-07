@@ -25,6 +25,7 @@
 #ifndef _CCPACKET_H
 #define _CCPACKET_H
 
+#include "wiring.h"
 /**
  * Buffer and data lengths
  */
@@ -58,12 +59,12 @@ struct CCPACKET
     /**
      * Received Strength Signal Indication
      */
-    unsigned char rssi;
+    int8_t/*uint8_t*/ rssi;
 
     /**
      * Link Quality Index
      */
-    unsigned char lqi;
+    uint8_t lqi;
 };
 
 #endif
