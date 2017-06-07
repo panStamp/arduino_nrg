@@ -38,7 +38,7 @@
  * MCLK config macros with fixed VCORE
  */
 #define _SET_MCLK_12MHZ()   _SET_VCORE_12MHZ(2)
-#define _SET_MCLK_20MHZ()   setVcoreMCLK(3, DCORSEL_4, 0x262)
+#define _SET_MCLK_20MHZ()   setVcoreMCLK(3, DCORSEL_7, 0x262)
 
 /**
  * Class: CC430CORE
@@ -89,6 +89,17 @@ class CC430CORE
     void init(uint8_t vCore=2, uint16_t dcorsel=DCORSEL_5, uint16_t flln=0x16E);
 
     /**
+     * init20mhz
+     * 
+     * Initialize CC430 core at VCORE = 2 and SCLK = 20 MHz
+     *
+     */
+    inline void init20mhz(void)
+    {
+      init(3, DCORSEL_7, 0x262);
+    }
+
+    /**
      * setLowPowerMode
      *
      * Enter low power mode
@@ -112,6 +123,9 @@ class CC430CORE
      */
     inline void begin(void)
     {
+      #if (SYSTEM_CLK_FREQ == CLK_FREQ_20MHZ)
+      init20mhz();
+      #else
       // Initialize MCU core with minimum COREV
       init(0);
       // Read Vcc
@@ -121,6 +135,7 @@ class CC430CORE
         init(2);
       else if (vcc > 2000)
         init(1);
+      #endif
     }
 
     /**
@@ -184,7 +199,7 @@ class CC430CORE
      *
      * Read internal temperature from CC430 MCU
      *
-     * @return voltage in 0.1 ºC
+     * @return temperature in 0.1 ºC
      */
     inline int getTemp(void)
     {

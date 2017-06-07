@@ -36,7 +36,12 @@
 /**
  * System clock
  */
-#define SYSTEM_CLK_FREQ 12000000L
+#define CLK_FREQ_12MHZ  12000000L
+#define CLK_FREQ_20MHZ  20000000L
+
+#define SYSTEM_CLK_FREQ CLK_FREQ_12MHZ
+//#define SYSTEM_CLK_FREQ CLK_FREQ_20MHZ
+
 #ifndef F_CPU
 #define F_CPU  SYSTEM_CLK_FREQ
 #endif
