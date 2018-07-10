@@ -28,6 +28,32 @@
 //#include <Arduino.h>
 #include "cc430spi.h"
 
+#define SPI_MODE0 0x02
+#define SPI_MODE1 0x00
+#define SPI_MODE2 0x03
+#define SPI_MODE3 0x01
+
+
+class SPISettings
+{
+  private:
+    uint32_t clockFreq;
+    uint8_t dataMode;
+    uint32_t bitOrder;
+
+  public:
+    /**
+     * Class constructor
+     */
+    inline SPISettings(uint32_t clock, uint8_t bOrder, uint8_t dMode)
+    {
+      clockFreq = clock;
+      bitOrder = bOrder;
+      dataMode = dMode;
+    }
+
+  friend class SPIClass;
+};
 
 class SPIClass
 {
@@ -47,7 +73,15 @@ class SPIClass
     }
 
     /**
-     * write
+     * Initialize the SPI library
+     */
+    inline void beginTransaction(SPISettings settings)
+    {
+      begin();
+    }
+
+    /**
+     * transfer
      * 
      * Send single byte to SPI slave and read response
      *
@@ -78,6 +112,14 @@ class SPIClass
     /**
      * Disable the SPI bus
      */
+    inline void endTransaction()
+    {
+      end();
+    }
+
+    /**
+     * Disable the SPI bus
+     */
     inline void end()
     {
     }
@@ -91,5 +133,4 @@ class SPIClass
 };
 
 extern SPIClass SPI;
-
 #endif
