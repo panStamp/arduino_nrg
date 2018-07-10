@@ -3,6 +3,29 @@
 menu.rfloader=Wireless bootloader
 
 ##############################################################
+nrg2.name=panStamp NRG 3 w/ cc430f5137
+nrg2.build.core=panstamp
+nrg2.upload.tool=ti-bsl
+nrg2.upload.protocol=ti-bsl
+nrg2.upload.maximum_size=32640
+nrg2.build.mcu=cc430f5137
+nrg2.build.f_cpu=12000000L
+nrg2.build.variant=panstamp_nrg_3.0
+nrg2.build.board=PANSTAMP_NRG
+
+nrg2.ldscript=ldscript
+
+## With serial bootloader only
+##------------------------------------------------------------
+nrg2.menu.rfloader.disabled=off
+nrg2.menu.rfloader.disabled.ldscript=ldscript
+
+## With serial and wireless bootloader
+##------------------------------------------------------------
+nrg2.menu.rfloader.enabled=on
+nrg2.menu.rfloader.enabled.ldscript=ldscript_rf
+
+##############################################################
 nrg2.name=panStamp NRG 2 w/ cc430f5137
 nrg2.build.core=panstamp
 nrg2.upload.tool=ti-bsl
