@@ -96,6 +96,7 @@ static const uint8_t A11 = 128 + 11; // special. This is Vcc/2
 #define ADC_RESOLUTION  0xFFF
 
 // LD-BOARD definitions
+#define CC1190_AVAILABLE 1
 #define HGM     26
 #define LNA_EN  25
 #define PA_EN   24
