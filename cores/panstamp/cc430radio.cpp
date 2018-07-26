@@ -79,6 +79,15 @@ void CC430RADIO::init(uint8_t freq, uint8_t mode)
 
   // Enter RX state
   setRxOnState();
+
+  #ifdef CC1190_AVAILABLE
+  pinMode(HGM, OUTPUT);
+  pinMode(LNA_EN, OUTPUT);
+  pinMode(PA_EN, OUTPUT);
+  digitalWrite(HGM, LOW);
+  digitalWrite(LNA_EN, LOW);
+  digitalWrite(PA_EN, LOW);
+  #endif
 }
 
 /**
@@ -257,7 +266,9 @@ void CC430RADIO::setRxOnState(void)
   rfState = RFSTATE_RXON;
 
   // Enable LNA on LD-board if any
+  #ifndef CC1190_AVAILABLE
   if (hgmEnabled)
+  #endif
     enableLNA();
 }
 
@@ -287,7 +298,9 @@ void CC430RADIO::setRxOffState(void)
   rfState = RFSTATE_RXOFF;
 
   // Disable LNA on LD-board if any
+  #ifndef CC1190_AVAILABLE
   if (hgmEnabled)
+  #endif
     disableLNA();
 }
 

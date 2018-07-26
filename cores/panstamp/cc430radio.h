@@ -413,9 +413,11 @@ class CC430RADIO
      {
        hgmEnabled = true;
 
+       #ifndef CC1190_AVAILABLE // CC1190 as an external board
        pinMode(HGM, OUTPUT);
        pinMode(LNA_EN, OUTPUT);
        pinMode(PA_EN, OUTPUT);
+       #endif
 
        digitalWrite(HGM, HIGH);
        enableLNA();
