@@ -1,136 +1,202 @@
-/**
- * Copyright (c) 2014 panStamp <contact@panstamp.com>
- * 
- * This file is part of the panStamp project.
- * 
- * panStamp  is free software; you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 3 of the License, or
- * any later version.
- * 
- * panStamp is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with panStamp; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 
- * USA
- * 
- * Author: Daniel Berenguer
- * Creation date: 12/02/2014
+/*
+ * Copyright (c) 2010 by Cristian Maglie <c.maglie@bug.st>
+ * SPI Master library for arduino.
+ *
+ * This file is free software; you can redistribute it and/or modify
+ * it under the terms of either the GNU General Public License version 2
+ * or the GNU Lesser General Public License version 2.1, both as
+ * published by the Free Software Foundation.
+ *
+ * 2012-04-29 rick@kimballsoftware.com - added msp430 support.
+ *
  */
 
 #ifndef _SPI_H_INCLUDED
 #define _SPI_H_INCLUDED
 
-//#include <Arduino.h>
-#include "cc430spi.h"
+#include <Energia.h>
+#include <inttypes.h>
 
-#define SPI_MODE0 0x02
-#define SPI_MODE1 0x00
-#define SPI_MODE2 0x03
-#define SPI_MODE3 0x01
+#if defined(__MSP430_HAS_USI__) || defined(__MSP430_HAS_USCI_B0__) || defined(__MSP430_HAS_USCI_B1__) || defined(__MSP430_HAS_USCI__) || defined(__MSP430_HAS_EUSCI_B0__) || defined(__MSP430_HAS_EUSCI_B1__) || defined(__MSP430_HAS_EUSCI_B2__) || defined(__MSP430_HAS_EUSCI_B3__) || defined(DEFAULT_SPI)
+#include "utility/spi_430.h"
+#endif
+
+#define SPI_MODE0 0
+#define SPI_MODE1 1
+#define SPI_MODE2 2
+#define SPI_MODE3 4
 
 
-class SPISettings
-{
-  private:
-    uint32_t clockFreq;
-    uint8_t dataMode;
-    uint32_t bitOrder;
+#if defined(__MSP430_HAS_USCI_B0__)
+#define UCB0_BASE __MSP430_BASEADDRESS_USCI_B0__
+#endif
+#if defined(__MSP430_HAS_USCI_B1__)
+#define UCB1_BASE __MSP430_BASEADDRESS_USCI_B1__
+#endif
+#if defined(__MSP430_HAS_USCI_B2__)
+#define UCB2_BASE __MSP430_BASEADDRESS_USCI_B2__
+#endif
+#if defined(__MSP430_HAS_USCI_B3__)
+#define UCB3_BASE __MSP430_BASEADDRESS_USCI_B3__
+#endif
 
-  public:
-    /**
-     * Class constructor
-     */
-    inline SPISettings(uint32_t clock, uint8_t bOrder, uint8_t dMode)
-    {
-      clockFreq = clock;
-      bitOrder = bOrder;
-      dataMode = dMode;
-    }
+#if defined(__MSP430_HAS_EUSCI_B0__)
+#define UCB0_BASE __MSP430_BASEADDRESS_EUSCI_B0__
+#endif
+#if defined(__MSP430_HAS_EUSCI_B1__)
+#define UCB1_BASE __MSP430_BASEADDRESS_EUSCI_B1__
+#endif
+#if defined(__MSP430_HAS_EUSCI_B2__)
+#define UCB2_BASE __MSP430_BASEADDRESS_EUSCI_B2__
+#endif
+#if defined(__MSP430_HAS_EUSCI_B3__)
+#define UCB3_BASE __MSP430_BASEADDRESS_EUSCI_B3__
+#endif
 
-  friend class SPIClass;
+#if defined(__MSP430_HAS_EUSCI_A0__)
+#define UCA0_BASE __MSP430_BASEADDRESS_EUSCI_A0__
+#endif
+#if defined(__MSP430_HAS_EUSCI_A1__)
+#define UCA1_BASE __MSP430_BASEADDRESS_EUSCI_A1__
+#endif
+#if defined(__MSP430_HAS_EUSCI_A2__)
+#define UCA2_BASE __MSP430_BASEADDRESS_EUSCI_A2__
+#endif
+#if defined(__MSP430_HAS_EUSCI_A3__)
+#define UCA3_BASE __MSP430_BASEADDRESS_EUSCI_A3__
+#endif
+
+
+class SPISettings {
+public:
+  uint8_t _bitOrder;  
+  uint8_t _mode;
+  uint8_t _rate;
+  SPISettings(uint32_t clock, uint8_t bitOrder, uint8_t dataMode) {
+      init_AlwaysInline(clock, bitOrder, dataMode);
+  }
+  SPISettings() {
+    init_AlwaysInline(4000000, MSBFIRST, SPI_MODE0);
+  }
+private:
+
+  void init_AlwaysInline(uint32_t clock, uint8_t bitOrder, uint8_t dataMode)
+    __attribute__((__always_inline__)) {
+
+    // Pack into the SPISettings class
+    _bitOrder = bitOrder;
+    _mode     = dataMode ;
+    _rate     =  F_CPU/clock;;
+  }
+  friend class SPIClass;  
 };
 
-class SPIClass
-{
-  private:
-    /**
-     * Low level SPI object
-     */
-    CC430SPI spiPort;
-    
-  public:
-    /**
-     * Initialize the SPI library
-     */
-    inline void begin()
-    {
-      spiPort.begin();
-    }
+extern uint8_t spiModule ;
 
-    /**
-     * Initialize the SPI library
-     */
-    inline void beginTransaction(SPISettings settings)
-    {
-      begin();
-    }
+class SPIClass {
+public:
+  
+  inline static void beginTransaction(SPISettings settings);
+  inline static void endTransaction(void);
+  inline static uint8_t transfer(uint8_t data);
+  inline static uint16_t transfer16(uint16_t data);
+  inline static void transfer(void *buf, size_t count);
+  inline static void transmit(uint8_t data);
+  inline static void transmit16(uint16_t data);
+  inline static void transmit(void *buf, size_t count);
+  
+  // SPI Configuration methods
 
-    /**
-     * transfer
-     * 
-     * Send single byte to SPI slave and read response
-     *
-     * @param data Byte to be sent
-     * 
-     * @return byte returned by slave
-     */
-    inline uint8_t transfer(uint8_t data)
-    {
-      return spiPort.transfer(data);
-    }
+  SPIClass(void);
+  inline static void begin(); // Default
+  inline static void begin(uint8_t module);
+  inline static void end();
 
-    /**
-     * write
-     * 
-     * Send data buffer to SPI slave
-     *
-     * @param data Buffer to be sent
-     * @param len Amount of bytes to be transferred
-     *
-     * @return Amount of bytes transmitted
-     */
-    void inline transfer(uint8_t *buf, uint8_t count)
-    {
-      spiPort.transfer(buf, count);
-    }
+  inline static void setBitOrder(uint8_t);
+  inline static void setDataMode(uint8_t);
+  inline static void setClockDivider(uint8_t);
 
-    /**
-     * Disable the SPI bus
-     */
-    inline void endTransaction()
-    {
-      end();
-    }
+  inline static void attachInterrupt();
+  inline static void detachInterrupt();
 
-    /**
-     * Disable the SPI bus
-     */
-    inline void end()
-    {
-    }
-    
-    /**
-     * Not implemented
-     */
-    inline void setClockDivider(uint8_t clockDiv)
-    {
-    }
+  void setModule(uint8_t);
 };
 
 extern SPIClass SPI;
+
+void SPIClass::beginTransaction(SPISettings settings) {
+	spi_set_bitorder(settings._bitOrder);
+	spi_set_datamode(settings._mode);
+	spi_set_divisor(settings._rate);
+}
+
+
+void SPIClass::begin(void) {
+    spi_initialize();
+}
+
+void SPIClass::begin(uint8_t module) {
+    SPI.setModule(module);
+    begin();
+}
+
+uint8_t SPIClass::transfer(uint8_t data) {
+    return spi_send(data);
+}
+
+uint16_t SPIClass::transfer16(uint16_t data) {
+    return spi_send16(data);
+}
+
+void SPIClass::transfer(void *buf, size_t count) {
+    return spi_send(buf, count);
+}
+
+void SPIClass::transmit(uint8_t data) {
+    spi_transmit(data);
+}
+
+void SPIClass::transmit16(uint16_t data) {
+    spi_transmit16(data);
+}
+
+void SPIClass::transmit(void *buf, size_t count) {
+    spi_transmit(buf, count);
+}
+
+// After performing a group of transfers and releasing the chip select
+// signal, this function allows others to access the SPI bus
+void SPIClass::endTransaction(void) {
+    spi_disable();
+}
+
+void SPIClass::end()
+{
+    spi_disable();
+}
+
+void SPIClass::setBitOrder(uint8_t bitOrder)
+{
+    spi_set_bitorder(bitOrder);
+}
+
+void SPIClass::setDataMode(uint8_t mode)
+{
+    spi_set_datamode(mode);
+}
+
+void SPIClass::setClockDivider(uint8_t rate)
+{
+    spi_set_divisor(rate);
+}
+
+void SPIClass::attachInterrupt() {
+    /* undocumented in Arduino 1.0 */
+}
+
+void SPIClass::detachInterrupt() {
+    /* undocumented in Arduino 1.0 */
+}
+
+
 #endif
