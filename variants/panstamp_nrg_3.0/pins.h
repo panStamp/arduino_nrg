@@ -41,6 +41,12 @@
 // SPI
 #define pinSPImap()       P1MAP0 = PM_UCB0SIMO; P1MAP1 = PM_UCB0SOMI; P1MAP2 = PM_UCB0CLK
 #define pinSPIconfig()    P1SEL |= BIT0 | BIT1 | BIT2  // Set P1.0, P1.1 and P1.2 to USCI function
+#define SCK   2
+#define MISO  1
+#define MOSI  0
+#define SPISCK_SET_MODE (PORT_SELECTION0)
+#define SPIMOSI_SET_MODE (PORT_SELECTION0)
+#define SPIMISO_SET_MODE (PORT_SELECTION0)
 
 #define NOT_A_PORT 0
 #define NOT_A_PIN 0
