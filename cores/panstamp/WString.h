@@ -33,7 +33,7 @@
 //     -felide-constructors
 //     -std=c++0x
 
-//class __FlashStringHelper;
+class __FlashStringHelper;
 //#define F(string_literal) (reinterpret_cast<__FlashStringHelper *>(PSTR(string_literal)))
 #define F(string_literal) (string_literal)
 

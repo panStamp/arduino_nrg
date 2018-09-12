@@ -3,6 +3,7 @@
 
 #include "wiring.h"
 #include "WString.h"
+#include "Stream.h"
 #include "WCharacter.h"
 #include "panstamp.h"
 

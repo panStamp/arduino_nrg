@@ -179,8 +179,11 @@ void enableWatchDog();
 
 // wiring_digital.cpp
 void pinMode(uint8_t pin, uint8_t mode);
+void pinMode_int(uint8_t pin, uint16_t mode);
 uint8_t digitalRead(uint8_t pin);
 void digitalWrite(uint8_t pin, uint8_t state);
+
+#define portSel0Register(P)    ( (volatile uint8_t *)( port_to_sel[P]) )
 
 // wiring_analog.cpp
 uint16_t analogRead(uint8_t pin);
@@ -207,5 +210,21 @@ uint8_t shiftIn(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder);
 long random(long);
 long random(long, long);
 void randomSeed(unsigned int);
+
+// stdint
+#define INT8_C(c)               c
+#define INT16_C(c)              c
+#define INT32_C(c)              c ## L
+#define INT64_C(c)              c ## LL
+
+#define UINT8_C(c)              c ## U
+#define UINT16_C(c)             c ## U
+#define UINT32_C(c)             c ## UL
+#define UINT64_C(c)             c ## ULL
+
+#define U8_C  UINT8_C
+#define U16_C UINT16_C
+#define U32_C UINT32_C
+#define U64_C UINT64_C
 
 #endif
